@@ -1,0 +1,58 @@
+h1{
+ margin: 0%;   
+}
+
+h2{
+    margin: 0%;
+}
+
+body {
+    background-image: linear-gradient(#95cae1, #c5abd7, #e792ce);
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    height: 100vh;
+    margin:0;
+}
+
+.cabecalho {
+    background-color: #8dd0e2;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: #000 -2px -2px;
+    display: block;
+    margin: 0;
+}
+
+.rodape {   
+    background-color:#8dd0e2;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 130%;
+    text-shadow: #000 -2px -2px;
+    position: fixed;
+    width: 100%;
+    display: block;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    background-color: whitesmoke;
+    text-shadow:purple -1px -1px;
+    text-align: center;
+    padding: 5px;
+    margin: 0%;
+}
+
+a {
+    color: #000066;
+    font-weight: bolder;
+    font-size: large;
+    margin: 30px;
+}
+
+img {
+    position: relative;
+}
