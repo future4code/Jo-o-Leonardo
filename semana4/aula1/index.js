@@ -1,113 +1,131 @@
-// -----------------------------------EXEMPLOS----------------------------------- //
+// Exercícios de interpretação de código //
 
-// Exemplo 1 - Função nomeada
-// function dizOi(){
-//     console.log("Oi!")
-// }
+/*
 
-// for(let i = 5; i !== 0; i--){
-//     dizOi()
-// }
+EXERCÍCIO 1
 
-// Exemplo 2 - Função nomeada com argumentos
-// function somaDoisNumeros(num1, num2){
-//     const soma = num1 + num2
-//     console.log(soma)
-// }
+a. 10
+   50
 
-// const primeiroNum = Number(prompt("Insira o primeiro numero"))
-// const segundoNum = Number(prompt("Insira o segundo numero"))
-
-// somaDoisNumeros(primeiroNum, segundoNum)
+b. As funções seriam executadas mas nada apareceria no console.
 
 
-// Exemplo 3 - Função nomeada com argumentos e retorno
-// function somaDoisNumeros(num1, num2){
-//     const soma = num1 + num2
-//     return soma
-// }
+EXERCÍCIO 2
 
-// const resultado = somaDoisNumeros(12,3)
-// console.log(resultado*3)
+a.  Darvas
+    Goli
 
-
-// Exemplo 4 - Função não-nomeada com argumentos e retorno
-// let somaDoisNumeros = function (num1, num2){
-//     const soma = num1 + num2
-//     return soma
-// }
-
-// const resultado = somaDoisNumeros(12, 4)
-// console.log(resultado)
+b.  Amanda
+    Caio
 
 
-// Exemplo 5 - Função não-nomeada do tipo arrow function com argumentos e retorno
-// let somaDoisNumeros = (num1, num2) => {
-//     return num1 + num2
-// }
+EXERCÍCIO 3
 
-// const resultado = somaDoisNumeros(2, 4)
-// console.log(resultado)
-
-// Exemplo 6 - Ordem das declarações
-// Hoisting
-
-// dizOi()
-// dizTudoBem()
-// dizTchau()
-
-// function dizOi(){
-//     console.log("Oi")
-// }
-
-// const dizTudoBem = function(){
-//     console.log("Tudo bem?")
-// }
-
-// let dizTchau = () => {
-//     console.log("Tchau")
-// }
+Essa função passa por todo o array de entrada, verifica se o número é par e, se for par, adiciona o número multiplicado por ele mesmo a um novo array (arrayFinal).
 
 
-// ----------------------------------EXERCÍCIOS---------------------------------- //
+*/
 
-// Exercício 1
-// function manipulaArray(meuArray){
-//     for(item of meuArray){
-//         console.log(item)
-//     }
-//     return meuArray.length
-//     console.log("oi") // Esse código nunca é executado
-// }
+// Exercícios de escrita de código //
 
-// const numeros = [1, 2, 3, 4, 5, 6]
-// const tamanhoNumeros = manipulaArray(numeros)
-// console.log("Tamanho: ", tamanhoNumeros)
-
-// const palavras = ["Letícia", "Alves", "Chijo"]
-// const tamanhoPalavras = manipulaArray(palavras)
-// console.log("Tamanho palavras: ", tamanhoPalavras)
+/*
 
 
-// Exercício 2
-// const manipulaArray = (meuArray) => {
-//     for(let i = 0; i < meuArray.length; i++){
-//         console.log(meuArray[i])
-//     }
-//     return meuArray.length
-// }
+EXERCÍCIO 4
 
-// const imprimeMensagem = (mensagem) => {
-//     console.log(mensagem)
-// }
+a.
 
-// const numeros = [1, 2, 3, 4, 5, 6]
-// const numeros2 = [12, 13, 14]
-// const tamanhoNumeros = manipulaArray(numeros)
-// console.log("Tamanho: ", tamanhoNumeros)
+function sobreMim() {
+    console.log("Eu sou o Caio, tenho 23 anos, moro em São Paulo e sou estudante.")
+}
 
-// const palavras = ["Letícia", "Alves", "Chijo"]
-// const tamanhoPalavras = manipulaArray(palavras)
-// console.log("Tamanho palavras: ", tamanhoPalavras)
+b.
 
-// imprimeMensagem(numeros)
+function sobreMim(nome, idade, cidade, ehEstudante) {
+    let mensagemSeEstudante = ""
+    if (ehEstudante) {
+        mensagemSeEstudante = "sou"
+    } else {
+        mensagemSeEstudante = "não sou"
+    }
+
+    console.log(`Eu sou ${nome}, tenho ${idade} anos, moro em ${cidade} e ${mensagemSeEstudante} estudante.`)
+}
+
+
+EXERCICIO 5
+
+a.
+
+let soma = function(a, b) {
+    return a + b
+}
+
+console.log(soma(1, 2))
+
+b.
+
+let ehMaior = function(a, b) {
+    if (a >= b) {
+        return true
+    } else {
+        return false
+    }
+}
+
+console.log(ehMaior(13, 6))
+
+c.
+
+let imprimeDezVezes = function (mensagem) {
+    for (let i = 0; i < 10; i++) {
+        console.log(mensagem)
+    }
+}
+
+
+EXERCÍCIO 6
+
+a.
+
+let quantidadeDeElementos = (array) => {
+    return array.length
+}
+
+b.
+
+let ehPar = (numero) => {
+    if (numero % 2 === 0) {
+        return true
+    } else {
+        return false
+    }
+}
+
+c.
+
+let numeroDePares = (array) => {
+    let quantidadeDePares = 0
+    for (numero of array) {
+        if (numero % 2 === 0) {
+            quantidadeDePares += 1
+        }
+    }
+
+    return quantidadeDePares
+}
+
+d.
+
+let numeroDePares = (array) => {
+    let quantidadeDePares = 0
+    for (numero of array) {
+        if (ehPar(numero)) {
+            quantidadeDePares += 1
+        }
+    }
+
+    return quantidadeDePares
+}
+
+*/

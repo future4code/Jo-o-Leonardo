@@ -129,12 +129,22 @@ contador(array)
 
 const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
 
+let checaPares = (array) => {
+    if (array % 2 === 0){
+        return true
+    }
+    else{
+        return false
+    }
+}
+console.log(checaPares(array[]))
+
 
 //c
 
 const meuArray = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
 
-const paresArray = (array) => {
+let paresArray = (array) => {
     let arrayFinal = [];
   
     for (let x of array) {
@@ -147,3 +157,16 @@ const paresArray = (array) => {
   }
 const resultado = paresArray(meuArray)
 console.log(resultado)
+
+//d
+
+let numeroDePares = (array) => {
+    let quantidadeDePares = 0
+    for (numero of array) {
+        if (ehPar(numero)) {
+            quantidadeDePares += 1
+        }
+    }
+
+    return quantidadeDePares
+}
