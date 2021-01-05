@@ -7,26 +7,34 @@ import Final from "./components/Final";
 
 export default class App extends React.Component {
   state = {
-    estaLogado: false
-  };
+    etapa: 1
+  }
+  irParaProximaEtapa = () => {
+    this.setState({ etapa: etapa + 1})
+  }
 
-  fazerLogin = () => {
-    this.setState({ estaLogado: true });
-  };
-
-  fazerLogout = () => {
-    this.setState({ estaLogado: false });
-  };
+  renderizaEtapa = () => {
+    switch(this.state.etapa){
+      case 1:
+        return <Etapa1 />;
+        break;
+      case 2:
+        return <Etapa2 />;
+        break;
+      case 3:
+        return <Etapa3 />;
+        break;
+      case 4:
+        return <Final />;
+        break;    
+    }
 
   render() {
-    const renderizaTelaCorreta = () => {
-      if (this.state.estaLogado) {
-        return <Home botaoLogout={this.fazerLogout} />;
-      } else {
-        return <Login botaoLogin={this.fazerLogin} />;
-      }
-    };
-
-    return <div className="App">{renderizaTelaCorreta()}</div>;
+    return (
+      <div>
+        {this.renderizaEtapa()}
+        <button onClick={irParaProximaEtapa}>Próxima Etapa</button>
+      </div>
+    );
   }
 }

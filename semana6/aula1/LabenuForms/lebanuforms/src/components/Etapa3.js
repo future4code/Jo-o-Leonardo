@@ -1,11 +1,6 @@
 import React from "react";
-import Etapa3 from "./Final";
 
 export default class Etapa3 extends React.Component {
-
-    irFinal = () => {
-        this.setState({ telaAtual: "Final" });
-      };
 
     render() {
 
@@ -22,7 +17,6 @@ export default class Etapa3 extends React.Component {
                     <option value="Curso técnico"/>
                     <option value="Curso de inglês"/>
                     </select>
-                    <button onClick={this.irFinal}>Próxima Etapa</button>
                 </form>
             </div>
         );
