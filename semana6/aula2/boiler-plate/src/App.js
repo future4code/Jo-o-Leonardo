@@ -37,17 +37,18 @@ class App extends React.Component {
     this.setState({ inputValue: event.target.value });
   }
 
-  criaTarefa = (e) => {
+  criaTarefa = () => {
     const novaTarefa = {
       id: Date.now(),
-      texto: '',
+      texto: this.state.inputValue,
       completa: false
     }
-    const copiaDoEstado = [...this.state.tarefas]
-
-    copiaDoEstado.push(novaTarefa)
+    const copiaDoEstado = [novaTarefa, ...this.state.tarefas]
     this.setState({
-      id: e.target.value
+      tarefas: copiaDoEstado
+    })
+    this.setState({
+      inputValue: ''
     })
   }
 
