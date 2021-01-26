@@ -40,8 +40,8 @@ class Post extends React.Component {
   // método chamado quando o ícone de comentário é clicado. O método apenas muda o valor de 
   // comentando no estado, de true para false ou de false para true.
   onClickComentario = () => {
-    this.setState({
-      comentando: !this.state.comentando
+        this.setState({
+          comentando: !this.state.comentando
     })
   }
 
