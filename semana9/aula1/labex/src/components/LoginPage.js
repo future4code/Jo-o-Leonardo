@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-
+import Router from "../src/components/Router/Router";
 
 export const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -18,11 +18,10 @@ export const LoginPage = () => {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    if(token){
+    if (token) {
      history.push("/get")   
-    }
-  } []);
-  
+    } [ ]})
+
   useEffect(() => {
     const token = localStorage.getItem("token");
 
@@ -54,9 +53,10 @@ export const LoginPage = () => {
     <div>
       <h1>Realize o Login abaixo:</h1>
       <input value={email} onChange={handleEmail} placeholder="E-mail" />
-      <br>
       <input value={password} onChange={handlePassword} placeholder="Senha" />
       <button onClick={login}>Entrar</button>
     </div>
   );
 };
+
+export default LoginPage;

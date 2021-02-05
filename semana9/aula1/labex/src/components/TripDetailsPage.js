@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useProtectedPage } from "../hooks/useProtectedPage";
+import { useProtectedPage } from "../components/Hooks/useProtectedPage";
+import Router from "../src/components/Router/Router"
 
-export const GetTripDetailPage = () => {
+export const TripDetailsPage = () => {
   const [trip, setTrip] = useState({});
   useProtectedPage();
 
@@ -37,3 +38,5 @@ export const GetTripDetailPage = () => {
     </div>
   );
 };
+
+export default TripDetailsPage;

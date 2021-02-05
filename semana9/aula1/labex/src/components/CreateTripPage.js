@@ -1,6 +1,7 @@
 import React from 'react'
-import Router from "./routes/Router";
 import useInput from "./Hooks/useInput";
+import Routers from "./Router/Router";
+import axios from 'axios';
 
 
   function FormApplication() {
@@ -14,13 +15,14 @@ import useInput from "./Hooks/useInput";
       event.preventDefault();
       const body = {
         name: name,
-        age: age,
-        applicationText: applicationText,
-        profession: profession, 
+        planet: planet,
+        description: description,
+        durationInDays: durationInDays, 
         country: country
       };
+    }
   
-      makePostRequest = (body) => {
+      const  makePostRequest = (body) => {
         axios
         .post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/:aluno/trips/:id/apply")
     
@@ -29,7 +31,7 @@ import useInput from "./Hooks/useInput";
         }).catch((error) => {
             console.log(error.message)
         })
-    
+  
       };
     
     return (
@@ -54,13 +56,6 @@ import useInput from "./Hooks/useInput";
             <option value="Urano">Urano</option>
             <option value="Netuno">Netuno</option>
         </select>
-          <input
-            type={"planet"}
-            placeholder={"planet"}
-            value={planet}
-            onChange={onChangePlanet}
-            required
-          />
           <input
             type={"date"}
             placeholder={"date"}
@@ -87,3 +82,5 @@ import useInput from "./Hooks/useInput";
       </div>
     );
   }
+
+  export default CreateTripPage;

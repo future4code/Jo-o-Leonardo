@@ -7,7 +7,7 @@ import LoginPage from "../LoginPage";
 import ApplicationFormPage from "../ApplicationFormPage";
 import { BrowserRouter, Switch, Route } from "react-router-dom"; 
 
-export default function Router() {
+export function Router() {
     return(
         <BrowserRouter>
         <Switch>
