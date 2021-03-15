@@ -1,0 +1,14 @@
+{
+  "name": "epps-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "searchCountryByName": "clear && node index.js",
+    "starthiago": "node index2.js"
+  },
+  "keywords": ["npm", "epps"],
+  "author": "",
+  "license": "ISC"
+}
