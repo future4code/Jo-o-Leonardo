@@ -1,0 +1,7 @@
+tsc --init
+(cria um tsconfig.json, lá vc altera:
+-Target: es6
+sourceMap (descomentar)
+removeComents (descomentar)
+outDir "./build" (Escrever o caminho, criar a pasta com mkdir e botar o index.js)
+rootDir "./src" (Escrever o caminho, criar a pasta com mkdir e botar o index.ts)
