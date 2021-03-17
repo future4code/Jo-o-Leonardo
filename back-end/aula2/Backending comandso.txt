@@ -1,7 +1,13 @@
 tsc --init
 (cria um tsconfig.json, lá vc altera:
 -Target: es6
-sourceMap (descomentar)
-removeComents (descomentar)
+sourceMap (descomentar) cria um arquivo .map que vai servir pra debug
+removeComents (descomentar) tirar a possibilidade de comentarios pq é inutil aki
 outDir "./build" (Escrever o caminho, criar a pasta com mkdir e botar o index.js)
 rootDir "./src" (Escrever o caminho, criar a pasta com mkdir e botar o index.ts)
+
+a partir de agr já pode ser usado o comando 'tsc' pra transpilar tudo da ./src e o resultado vai pra ./build
+
+touch .gitignore (Cria um arquivo .gitignore (lá vc escreve node_modules pra ele não subir o node pro git de vcs)
+
+
